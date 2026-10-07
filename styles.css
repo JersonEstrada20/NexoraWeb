@@ -931,6 +931,10 @@ h3 {
   transition: opacity 700ms ease, transform 700ms ease;
 }
 
+html.js .reveal {
+  opacity: 0;
+}
+
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);

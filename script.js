@@ -1,3 +1,5 @@
+document.documentElement.classList.add("js");
+
 const header = document.querySelector("[data-header]");
 const nav = document.querySelector("[data-nav]");
 const menuButton = document.querySelector("[data-menu-button]");
@@ -13,12 +15,18 @@ function closeMenu() {
   nav.classList.remove("is-open");
   header.classList.remove("is-open");
   menuButton.setAttribute("aria-expanded", "false");
+  menuButton.setAttribute("aria-label", "Abrir menú");
 }
 
 menuButton.addEventListener("click", () => {
   const isOpen = nav.classList.toggle("is-open");
   header.classList.toggle("is-open", isOpen);
   menuButton.setAttribute("aria-expanded", String(isOpen));
+  menuButton.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeMenu();
 });
 
 nav.querySelectorAll("a").forEach((link) => {
@@ -63,7 +71,8 @@ if (quoteForm) {
     }
 
     if (channel === "telegram") {
-      window.open("https://t.me/OficialNexora", "_blank", "noopener,noreferrer");
+      const shareUrl = `https://t.me/share/url?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(requestText)}`;
+      window.open(shareUrl, "_blank", "noopener,noreferrer");
       return;
     }
 

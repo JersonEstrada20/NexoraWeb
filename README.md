@@ -1,33 +1,36 @@
 # Nexora Web
 
-Landing page estatica para Nexora: paginas web, bots para Telegram, aplicaciones personalizadas y automatizaciones.
+Sitio estático de Nexora para presentar servicios digitales, mostrar proyectos y recibir solicitudes de cotización.
 
-## Archivos
+## Contenido
 
-- `index.html`: estructura de la web.
-- `styles.css`: estilos responsive.
-- `script.js`: menu, animaciones y formulario de contacto.
-- `assets/`: imagenes de marca.
+- `index.html`: página principal, secciones de servicios, proyectos, preguntas frecuentes y formulario.
+- `styles.css`: diseño adaptable a celulares y computadores, incluida la navegación móvil.
+- `script.js`: menú, animaciones de entrada, año del pie de página y envío de solicitudes por WhatsApp, Telegram o correo.
+- `404.html`: página de respaldo que redirige al inicio cuando se publica en GitHub Pages.
+- `assets/`: imágenes de marca, portada y vista previa para redes sociales.
 
-## Publicar gratis
+## Ver el sitio localmente
 
-Opcion recomendada: GitHub Pages.
+Abre `index.html` en un navegador. No se necesita instalar dependencias ni ejecutar un proceso de compilación.
 
-GitHub Pages es gratis con GitHub Free si el repositorio es publico. Para repositorios privados se necesita un plan que incluya Pages en privados.
+## Publicar en GitHub Pages
 
-## Antes de subir
+El repositorio asociado es [JersonEstrada20/NexoraWeb](https://github.com/JersonEstrada20/NexoraWeb). Para publicar el sitio:
 
-- Usar un repositorio publico si se quiere GitHub Pages gratis.
-- No subir claves, contrasenas, tokens, bases de datos ni archivos privados.
-- Nombre recomendado del repositorio: `nexora-web`.
-- URL temporal esperada: `https://TU_USUARIO.github.io/nexora-web/`.
-- Mas adelante se puede conectar un dominio propio al mismo proyecto.
+1. En GitHub, abre **Settings → Pages**.
+2. En **Build and deployment**, elige **Deploy from a branch**.
+3. Selecciona la rama `main` y la carpeta `/(root)`, y guarda.
+4. GitHub mostrará la URL pública cuando termine la publicación. Para este repositorio suele ser `https://jersonestrada20.github.io/NexoraWeb/`.
 
-1. Crear un repositorio en GitHub, por ejemplo `nexora-web`.
-2. Subir estos archivos al repositorio.
-3. Entrar a `Settings > Pages`.
-4. En `Build and deployment`, elegir `Deploy from a branch`.
-5. Seleccionar rama `main` y carpeta `/root`.
-6. Guardar. GitHub entregara una URL gratis tipo `https://usuario.github.io/nexora-web/`.
+La disponibilidad de GitHub Pages depende de la visibilidad del repositorio y del plan de GitHub. También se puede usar otro servicio de hosting estático.
 
-Tambien se puede publicar gratis en Netlify o Vercel arrastrando la carpeta del proyecto, pero GitHub Pages es suficiente para esta web estatica mientras el repositorio sea publico.
+## Formulario de cotización
+
+El formulario prepara un mensaje con los datos ingresados y permite abrir WhatsApp, compartirlo mediante Telegram o redactar un correo. Es una página estática: no almacena ni envía los datos a un servidor. Los enlaces y datos de contacto se configuran en `index.html` y `script.js`.
+
+## Mantenimiento
+
+- Mantén los archivos del sitio en la raíz para que GitHub Pages los publique directamente.
+- Comprueba que cada imagen de `assets/` tenga una referencia en `index.html` o `styles.css` antes de agregarla o conservarla.
+- No incluyas contraseñas, tokens ni datos privados en este repositorio.
